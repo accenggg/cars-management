@@ -1,6 +1,6 @@
 export default function Service() {
   return (
-    <section className="content" id="ourservice">
+    <section className="content" id="ourservices">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">

@@ -2,7 +2,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-transparent">
       <div className="container">
-        <a href="index.html">
+        <a href="/">
           <img
             className="navbar-brand"
             src="images/logo.png"

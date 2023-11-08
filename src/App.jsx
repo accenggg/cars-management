@@ -1,16 +1,14 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useHistory } from "react";
 
 import React, { Component } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import Service from "./components/Service";
-import Feature from "./components/Feature";
-import Testimonial from "./components/Testimonial";
-import CallToAction from "./components/CallToAction";
-import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
+import Header from "./components/globals/Header";
+import Footer from "./components/globals/Footer";
+import LandingPage from "./LandingPage";
+import Cars from "./Cars";
 
 export default class App extends Component {
   componentDidMount() {
@@ -69,15 +67,14 @@ export default class App extends Component {
 
   render() {
     return (
-      <>
+      <BrowserRouter>
         <Header />
-        <Service />
-        <Feature />
-        <Testimonial />
-        <CallToAction />
-        <FAQ />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/cars" element={<Cars />} />
+        </Routes>
         <Footer />
-      </>
+      </BrowserRouter>
     );
   }
 }

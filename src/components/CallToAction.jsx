@@ -1,3 +1,5 @@
+import Button from "./globals/Button";
+
 export default function CallToAction() {
   return (
     <section className="sewa">
@@ -9,7 +11,8 @@ export default function CallToAction() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
             </p>
-            <button className="btn btn-utama mt-4">Mulai Sewa Mobil</button>
+            {/* <button className="btn btn-utama mt-4">Mulai Sewa Mobil</button> */}
+            <Button tag={"a"} href={"#"} description={"Mulai Sewa Mobil"} />
           </div>
         </div>
       </div>
