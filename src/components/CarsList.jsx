@@ -1,4 +1,7 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
+
+import { CarsContext } from "../store/cars-context";
 import Button from "./globals/Button";
 import Swal from "sweetalert2";
 
@@ -36,7 +39,9 @@ function timer() {
   });
 }
 
-export default function CarsList({ cars, loader }) {
+export default function CarsList() {
+  const { cars, loader } = useContext(CarsContext);
+
   return (
     <section className="cars">
       <div className="container">

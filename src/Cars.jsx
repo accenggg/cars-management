@@ -3,20 +3,17 @@ import Filtering from "./components/Filtering";
 import CarsList from "./components/CarsList";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-// import "sweetalert2/src/sweetalert2.scss";
+import { CarsContext } from "./store/cars-context";
 
 export default function Cars() {
-  const [cars, setCars] = useState();
+  const [cars, setCars] = useState({
+    cars: [],
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [form, setForm] = useState();
 
   function handleFormSubmit(form) {
     const formData = new FormData(form);
-
-    // const driver = formData.get("driver");
-    // const date = formData.get("date");
-    // const time = formData.get("time");
-    // const capacity = formData.get("capacity");
 
     const formObject = {
       driver: formData.get("driver"),
@@ -27,8 +24,6 @@ export default function Cars() {
 
     setForm(formObject);
   }
-
-  // useEffect(() => {}, [form]);
 
   useEffect(() => {
     async function getCars() {
@@ -43,15 +38,12 @@ export default function Cars() {
 
       setTimeout(() => {
         if (form !== undefined) {
-          // Filter data berdasarkan nilai `available` yang sesuai dengan nilai `driver`
           if (form.driver === "all") {
             filteredData = data;
-            setCars(data);
           } else if (form.driver === "true" || form.driver === "false") {
             filteredData = data.filter((car) => {
               return car.available === JSON.parse(form.driver);
             });
-            setCars(filteredData.length > 0 ? filteredData : data);
           }
 
           if (form.date) {
@@ -66,40 +58,37 @@ export default function Cars() {
               });
               filteredData = filteredDataDate;
             }
-            setCars(filteredDataDate);
-          } else {
-            setCars(filteredData.length > 0 ? filteredData : data);
           }
 
-          if (form.time) {
-            if (!form.date) {
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: `Cek waktu hanya bisa digunakan jika tanggal terisi.`,
-              });
-            }
+          if (form.time && !form.date) {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: `Cek waktu hanya bisa digunakan jika tanggal terisi.`,
+            });
           }
 
           if (form.capacity > 0) {
             const filteredDataCapacity = filteredData.filter((car) => {
               return car.capacity >= JSON.parse(form.capacity);
             });
+
             if (filteredDataCapacity.length === 0) {
               // Tampilkan SweetAlert di sini
               Swal.fire({
                 icon: "error",
                 title: "Oops...",
                 text: `Mobil dengan jumlah penumpang ${form.capacity} tidak tersedia.`,
+                footer: "Semua kendaraan akan ditampilkan!",
               });
               filteredData = filteredDataCapacity;
             }
-            setCars(filteredDataCapacity);
-          } else {
-            setCars(filteredData.length > 0 ? filteredData : data);
+            filteredData = filteredDataCapacity;
           }
+
+          setCars({ cars: filteredData.length > 0 ? filteredData : data });
         } else {
-          setCars(data);
+          setCars({ cars: data });
         }
 
         setIsLoading(false);
@@ -108,10 +97,15 @@ export default function Cars() {
     getCars();
   }, [form]);
 
+  const ctxValue = {
+    cars: cars.cars,
+    loader: isLoading,
+  };
+
   return (
-    <>
+    <CarsContext.Provider value={ctxValue}>
       <Filtering onFormSubmit={handleFormSubmit} />
-      <CarsList cars={cars} loader={isLoading} />
-    </>
+      <CarsList loader={isLoading} />
+    </CarsContext.Provider>
   );
 }
