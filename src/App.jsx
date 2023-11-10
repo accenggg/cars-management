@@ -9,6 +9,7 @@ import Header from "./components/globals/Header";
 import Footer from "./components/globals/Footer";
 import LandingPage from "./LandingPage";
 import Cars from "./Cars";
+import PageNotFound from "./PageNotFound";
 
 export default function App() {
   useEffect(() => {
@@ -64,14 +65,18 @@ export default function App() {
     });
   }, []);
 
+  const isHomePage = location.pathname === "/";
+  const isCarsPage = location.pathname === "/cars";
+
   return (
     <BrowserRouter>
-      <Header />
+      {isHomePage || isCarsPage ? <Header /> : null}{" "}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/cars" element={<Cars />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer />
+      {isHomePage || isCarsPage ? <Footer /> : null}{" "}
     </BrowserRouter>
   );
 }

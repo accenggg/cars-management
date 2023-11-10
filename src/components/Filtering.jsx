@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 export default function Searching({ onFormSubmit }) {
   return (
     <section className="search">
