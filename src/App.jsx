@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import { useState, useHistory } from "react";
+import { useState, useHistory, useEffect } from "react";
 
 import React, { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,9 +10,8 @@ import Footer from "./components/globals/Footer";
 import LandingPage from "./LandingPage";
 import Cars from "./Cars";
 
-export default class App extends Component {
-  componentDidMount() {
-    // Inisialisasi Owl Carousel di sini
+export default function App() {
+  useEffect(() => {
     $(" .owl-carousel ").owlCarousel({
       loop: true,
       margin: 20,
@@ -63,18 +62,16 @@ export default class App extends Component {
         },
       },
     });
-  }
+  }, []);
 
-  render() {
-    return (
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/cars" element={<Cars />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    );
-  }
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/cars" element={<Cars />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
