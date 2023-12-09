@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 export default function Hero() {
@@ -17,7 +18,14 @@ export default function Hero() {
               kualitas terbaik dengan harga terjangkau. Selalu siap melayani
               kebutuhanmu untuk sewa mobil selama 24 jam.{" "}
             </p>
-            <Button tag={"a"} description={"Mulai Sewa Mobil"} href={"/cars"} />
+            <Link to={"/cars"}>
+              <button
+                className="btn btn-utama"
+                style={{ textDecoration: "none" }}
+              >
+                Mulai Sewa Mobil
+              </button>
+            </Link>
           </div>
           <div
             className="col-lg-5 col-xl-6 col-xxl-6 mt-lg-3"
