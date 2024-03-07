@@ -4,8 +4,11 @@ export default function FAQ() {
       <div className="container">
         <div className="row">
           <div className="col-lg-5 title-faq">
-            <h2 className="fw-bold">Frequently Asked Question</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <h2 className="fw-bold">Pertanyaan yang Sering Diajukan</h2>
+            <p>
+              Berikut adalah beberapa pertanyaan yang sering diajukan tentang
+              layanan kami:
+            </p>
           </div>
           <div className="col-lg-7">
             <div className="accordion" id="accordionExample">
@@ -29,15 +32,11 @@ export default function FAQ() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    <strong>This is the first items accordion body.</strong> It
-                    is shown by default, until the collapse plugin adds the
-                    appropriate class that we use to style each element. These
-                    class control the overall appearance, as well as the showing
-                    and hiding via CSS transitions. You can modify any of this
-                    with custom CSS or overriding our default variables. Its
-                    also worth noting that just about any HTML can go within the{" "}
-                    <code>.accordion-body</code>, though the transition does
-                    limit overflow.
+                    <strong>
+                      Syarat yang dibutuhkan untuk menyewa mobil adalah:
+                    </strong>{" "}
+                    KTP asli, SIM asli, dan deposit sesuai dengan jenis mobil
+                    yang disewa.
                   </div>
                 </div>
               </div>
@@ -61,15 +60,10 @@ export default function FAQ() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    <strong>This is the second items accordion body.</strong> It
-                    is hidden by default, until the collapse plugin adds the
-                    appropriate class that we use to style each element. These
-                    class control the overall appearance, as well as the showing
-                    and hiding via CSS transitions. You can modify any of this
-                    with custom CSS or overriding our default variables. Its
-                    also worth noting that just about any HTML can go within the{" "}
-                    <code>.accordion-body</code>, though the transition does
-                    limit overflow.
+                    <strong>
+                      Hari minimal untuk menyewa mobil lepas kunci adalah 1
+                      hari.
+                    </strong>
                   </div>
                 </div>
               </div>
@@ -83,7 +77,7 @@ export default function FAQ() {
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                    Berapa hari sebelumnya sabaiknya booking sewa mobil?
+                    Berapa hari sebelumnya sebaiknya booking sewa mobil?
                   </button>
                 </h2>
                 <div
@@ -93,20 +87,15 @@ export default function FAQ() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    <strong>This is the third items accordion body.</strong> It
-                    is hidden by default, until the collapse plugin adds the
-                    appropriate class that we use to style each element. These
-                    class control the overall appearance, as well as the showing
-                    and hiding via CSS transitions. You can modify any of this
-                    with custom CSS or overriding our default variables. Its
-                    also worth noting that just about any HTML can go within the{" "}
-                    <code>.accordion-body</code>, though the transition does
-                    limit overflow.
+                    <strong>
+                      Kami menyarankan untuk melakukan booking minimal 3 hari
+                      sebelum hari pengambilan mobil.
+                    </strong>
                   </div>
                 </div>
               </div>
               <div className="accordion-item mt-3">
-                <h2 className="accordion-header" id="headingThree">
+                <h2 className="accordion-header" id="headingFour">
                   <button
                     className="accordion-button collapsed"
                     type="button"
@@ -125,15 +114,10 @@ export default function FAQ() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    <strong>This is the third items accordion body.</strong> It
-                    is hidden by default, until the collapse plugin adds the
-                    appropriate class that we use to style each element. These
-                    class control the overall appearance, as well as the showing
-                    and hiding via CSS transitions. You can modify any of this
-                    with custom CSS or overriding our default variables. Its
-                    also worth noting that just about any HTML can go within the{" "}
-                    <code>.accordion-body</code>, though the transition does
-                    limit overflow.
+                    <strong>
+                      Kami menyediakan layanan antar-jemput dengan biaya
+                      tambahan sesuai jarak dan jenis layanan yang dipilih.
+                    </strong>
                   </div>
                 </div>
               </div>
@@ -157,15 +141,10 @@ export default function FAQ() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    <strong>This is the third items accordion body.</strong> It
-                    is hidden by default, until the collapse plugin adds the
-                    appropriate class that we use to style each element. These
-                    class control the overall appearance, as well as the showing
-                    and hiding via CSS transitions. You can modify any of this
-                    with custom CSS or overriding our default variables. Its
-                    also worth noting that just about any HTML can go within the{" "}
-                    <code>.accordion-body</code>, though the transition does
-                    limit overflow.
+                    <strong>
+                      Jika terjadi kecelakaan, segera hubungi layanan darurat
+                      kami dan ikuti instruksi yang diberikan oleh petugas kami.
+                    </strong>
                   </div>
                 </div>
               </div>

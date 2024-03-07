@@ -11,7 +11,7 @@ export default function Hero() {
             style={{ paddingTop: "100px" }}
           >
             <h2 className="fw-bold" style={{ paddingRight: "10px" }}>
-              Sewa & Rental Mobil Terbaik di kawasan Depok
+              Sewa & Rental Mobil Terbaik di kawasan Samarinda
             </h2>
             <p style={{ paddingRight: "40px" }}>
               Selamat datang di Binar Car Rental. Kami menyediakan mobil

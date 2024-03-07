@@ -13,13 +13,13 @@ export default function Service() {
           </div>
           <div className="col-lg-6" style={{ paddingTop: "15px" }}>
             <h2 className="fw-bold fs-4" style={{ paddingRight: "200px" }}>
-              Best Car Rental for any kind of trip in Depok!
+              Best Car Rental for any kind of trip in Samarinda!
             </h2>
             <p style={{ fontSize: "14px", paddingRight: "30px" }}>
-              Sewa mobil di Depok bersama Binar Car Rental jaminan harga lebih
-              murah dibandingkan yang lain, kondisi mobil baru, serta kualitas
-              pelayanan terbaik untuk perjalanan wisata, bisnis, wedding,
-              meeting, dll.
+              Sewa mobil di Samarinda bersama Binar Car Rental jaminan harga
+              lebih murah dibandingkan yang lain, kondisi mobil baru, serta
+              kualitas pelayanan terbaik untuk perjalanan wisata, bisnis,
+              wedding, meeting, dll.
             </p>
             <div className=" list-check ">
               <p>

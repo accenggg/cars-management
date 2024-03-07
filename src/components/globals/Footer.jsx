@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-3 mx-auto">
             <p className="fw-light">
-              Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000{" "}
+              Jalan R. W. Monginsidi No. 999 Samarinda 672000{" "}
             </p>
             <p className="fw-light">binarcarrental@gmail.com </p>
             <p>081-233-334-808</p>

@@ -32,12 +32,10 @@ export default function Testimonial() {
                       className="w-25 mb-3 mb-lg-2"
                     />
                     <p className="card-text ">
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod lorem ipsum dolor sit
-                      amet, consectetur adipiscing elit, sed do eiusmod”
+                      Pelayanan sangat baik dan mobilnya nyaman. Sangat
+                      direkomendasikan!
                     </p>
-                    <p className="fw-bold ">John Dee 32, Bromo</p>
+                    <p className="fw-bold ">John Doe, Jakarta</p>
                   </div>
                 </div>
               </div>
@@ -64,12 +62,10 @@ export default function Testimonial() {
                       className="w-25 mb-3 mb-lg-2 "
                     />
                     <p className="card-text ">
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod lorem ipsum dolor sit
-                      amet, consectetur adipiscing elit, sed do eiusmod”
+                      Saya sangat puas dengan layanan mereka. Harganya juga
+                      sangat terjangkau!
                     </p>
-                    <p className="fw-bold ">John Dee 32, Bromo</p>
+                    <p className="fw-bold ">Jane Smith, Surabaya</p>
                   </div>
                 </div>
               </div>
@@ -96,12 +92,10 @@ export default function Testimonial() {
                       className="w-25 mb-3 mb-lg-2 "
                     />
                     <p className="card-text ">
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod lorem ipsum dolor sit
-                      amet, consectetur adipiscing elit, sed do eiusmod”
+                      Mobilnya bersih dan kenyamanan selama perjalanan sangat
+                      baik.
                     </p>
-                    <p className="fw-bold ">John Dee 32, Bromo</p>
+                    <p className="fw-bold ">Michael Johnson, Bandung</p>
                   </div>
                 </div>
               </div>
@@ -113,7 +107,7 @@ export default function Testimonial() {
                 <div className="col-lg-3 text-lg-center px-3 ">
                   <br />
                   <img
-                    src="images/img_photo.png "
+                    src="images/img_photo1.png "
                     className="img-fluid rounded-circle "
                     width="80px "
                     alt="... "
@@ -128,12 +122,10 @@ export default function Testimonial() {
                       className="w-25 mb-3 mb-lg-2 "
                     />
                     <p className="card-text ">
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod lorem ipsum dolor sit
-                      amet, consectetur adipiscing elit, sed do eiusmod”
+                      Saya sangat senang dengan pelayanan mereka. Akan
+                      menggunakan lagi di masa mendatang!
                     </p>
-                    <p className="fw-bold ">John Dee 32, Bromo</p>
+                    <p className="fw-bold ">Michelle Lee, Yogyakarta</p>
                   </div>
                 </div>
               </div>
